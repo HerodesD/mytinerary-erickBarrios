@@ -1,6 +1,6 @@
 import React from 'react';
 
-function LoginButton() {
+export default function LoginButton() {
     const handleLogin = () => {
         // Aquí puedes agregar la lógica de autenticación
         console.log('Login');
@@ -19,4 +19,3 @@ function LoginButton() {
 }
 
 
-export default LoginButton;

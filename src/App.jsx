@@ -6,6 +6,7 @@ import NotFound from "./Pages/NotFound";
 import StandardLayaout from './Layouts/StandardLayaout';
 
 
+
 const router = createBrowserRouter([ //Es el array de rutas
   {
     element: <StandardLayaout></StandardLayaout>,
