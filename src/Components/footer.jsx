@@ -15,19 +15,20 @@ export default function Footer() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <footer className="bg-black text-white  relative">
-            <div className="container mx-auto flex justify-center space-x-6">
+        <footer className="bg-black text-orange-300  text-center   relative">
+            <div className="container mx-auto flex justify-center flex-row gap-56 p-3 items-center">
+
                 <button
                     onClick={() => setIsOpen(!isOpen)}
-                    className="hover:opacity-75 focus:outline-none"
+                    className="hover:opacity-75 focus:outline-none "
                 >
-                    <img src="https://cdn-icons-png.flaticon.com/128/3545/3545581.png" alt="Menu" className="w-8 h-8" />
+                    <img src="https://cdn-icons-png.flaticon.com/128/3545/3545581.png" alt="Menu" className="w-8 h-8 hover:scale-150 " />
                 </button>
                 {isOpen && (
-                    <div className="text-center absolute bottom-16 bg-black text-white p-4  shadow-lg flex flex-col space-y-2">
+                    <div className="text-center absolute bottom-16 bg-slate-900 my-4 text-white p-2  shadow-lg flex flex-col space-y-2">
                         {iconDos.map(icon => (
                             <a key={icon.id} href="#" title={icon.title} className="hover:opacity-75 flex items-center space-x-2">
-                                <img src={icon.icon} alt={icon.title} className="w-6 h-6" />
+                                <img src={icon.icon} alt={icon.title} className="w-6 h-6 " />
                                 <span>{icon.title}</span>
                             </a>
                         ))}

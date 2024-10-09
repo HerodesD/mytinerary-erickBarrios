@@ -6,12 +6,12 @@ import CarouselP from "../Components/Train";
 export default function Home() {
     return (
         <>
+            <div className="bg-white">
+                <HeroWelcome></HeroWelcome>
+                <CallToAction></CallToAction>
 
-            <HeroWelcome></HeroWelcome>
-            <CallToAction></CallToAction>
-
-            <CarouselP ></CarouselP>
-
+                <CarouselP ></CarouselP>
+            </div>
         </>
     );
 }

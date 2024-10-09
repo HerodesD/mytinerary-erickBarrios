@@ -11,7 +11,7 @@ export default function CarouselP() {
 
         { id: 1, title: 'Santorini', city: 'https://images.pexels.com/photos/1285625/pexels-photo-1285625.jpeg?auto=compress&cs=tinysrgb&w=600' },
         { id: 2, title: 'Roma', city: 'https://images.pexels.com/photos/27530585/pexels-photo-27530585/free-photo-of-vaticano.jpeg?auto=compress&cs=tinysrgb&w=600' },
-        { id: 3, title: 'Londres', city: 'https://media.istockphoto.com/id/1347665170/es/foto/londres-al-atardecer.jpg?b=1&s=612x612&w=0&k=20&c=rTIlXSqQhfBtftA5TYiTP3jwHSZ9lJqDyIuvG5_TNck=' },
+        { id: 3, title: 'London', city: 'https://media.istockphoto.com/id/1347665170/es/foto/londres-al-atardecer.jpg?b=1&s=612x612&w=0&k=20&c=rTIlXSqQhfBtftA5TYiTP3jwHSZ9lJqDyIuvG5_TNck=' },
         { id: 4, title: 'Beijing', city: 'https://images.pexels.com/photos/2412603/pexels-photo-2412603.jpeg?auto=compress&cs=tinysrgb&w=600' },
         { id: 5, title: 'Praga', city: 'https://images.pexels.com/photos/15022214/pexels-photo-15022214/free-photo-of-ciudad-punto-de-referencia-noche-navidad.jpeg?auto=compress&cs=tinysrgb&w=600' },
         { id: 6, title: 'Marrakech', city: 'https://media.istockphoto.com/id/1294321554/es/foto/mezquita-de-koutoubia-por-la-ma%C3%B1ana-marrakech-marruecos.jpg?b=1&s=612x612&w=0&k=20&c=Xy-_TNeS_habGmi42KNPq-kxt6giED0BTZo-9EfFjtA=' },
@@ -51,8 +51,8 @@ export default function CarouselP() {
 
     return (
         <>
-            <div>
-                <h1 className="text-center text-3xl rounded-none font-bold">Popular Mytineraries</h1>
+            <div className='overflow-hidden'>
+                <h1 className="text-center text-3xl rounded-none font-mono">Popular Mytineraries</h1>
                 {slides.map((city, i) => (
                     <div className="items-center justify-center w-full h-full" key={i}>
                         <div
@@ -61,39 +61,42 @@ export default function CarouselP() {
                             {city.map((image) => (
                                 <div key={image.id} className="flex flex-col items-center justify-center w-full">
                                     <img
-                                        className="w-24 md:w-48 lg:w-72 xl:w-96     h-32 md:h-40 lg:h-48 xl:h-64 object-cover rounded-xl"
+                                        className="w-24 md:w-48 lg:w-72 xl:w-96 md:p-1    h-32 md:h-40 lg:h-48 xl:h-64 object-cover rounded-xl"
                                         src={image.city}
                                         alt={image.title}
                                     />
-                                    <div>
-                                        <h3 className="text-center mt-2 text-sm md:text-base lg:text-lg xl:text-xl font-bold rounded-lg shadow-lg">
-                                            {image.title}
-                                        </h3>
-                                    </div>
+
+                                    <h3 className="text-center text-sm md:text-base font-bold lg:text-lg xl:text-xl  rounded-lg shadow-lg">
+                                        {image.title}
+                                    </h3>
+
                                 </div>
                             ))}
-                            <button
-                                className="absolute top-1/2 left-0 transform -translate-y-1/2 p-1 md:p-2 lg:p-3 bg-white rounded-full"
-                                onClick={prevSlide}
-                            >
-                                <img className="w-3 h-4 md:w-4 md:h-5 lg:w-5 lg:h-6" src={icon[0].icon} alt={icon[0].title} />
-                            </button>
-                            <button
-                                className="absolute top-1/2 right-0 transform -translate-y-1/2 p-1 md:p-2 lg:p-3 bg-white rounded-full"
-                                onClick={nextSlide}
-                            >
-                                <img className="w-3 h-4 md:w-4 md:h-5 lg:w-5 lg:h-6" src={icon[1].icon} alt={icon[1].title} />
-                            </button>
+                            <div>
+                                <button
+                                    className="absolute animate-pulse hover:animate-none top-1/2 left-0 transform -translate-y-1/2 p-1 md:p-2 lg:p-3 bg-white rounded-full"
+                                    onClick={prevSlide}
+                                >
+                                    <img className="w-3 h-4 md:w-4 md:h-5 lg:w-5 lg:h-6 " src={icon[0].icon} alt={icon[0].title} />
+                                </button>
+                                <button
+                                    className="absolute animate-pulse hover:animate-none top-1/2 right-0 transform -translate-y-1/2 p-1 md:p-2 lg:p-3 bg-white rounded-full"
+                                    onClick={nextSlide}
+                                >
+                                    <img className="w-3 h-4 md:w-4 md:h-5 lg:w-5 lg:h-6" src={icon[1].icon} alt={icon[1].title} />
+                                </button>
+                            </div>
+
                         </div>
                     </div>
                 ))}
 
             </div>
-            <div className="flex justify-center mt-4">
+            <div className="flex justify-center mt-2 my-2 items-center ">
                 {slides.map((_, i) => (
                     <div
                         key={i}
-                        className={` w-4 h-3 flex items-center justify-center mx-1 rounded-full ${i === currentIndex ? 'bg-lime-300' : 'bg-gray-300'}`}
+                        className={` w-4 h-3 flex items-center justify-center mx-1 rounded-full ${i === currentIndex ? 'bg-green-500' : 'bg-black'}`}
                     />
                 ))}
             </div>

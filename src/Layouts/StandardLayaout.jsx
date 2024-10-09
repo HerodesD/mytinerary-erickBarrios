@@ -5,17 +5,16 @@ import Footer from '../Components/footer';
 export default function StandardLayout() {
     return (
         <>
-            <div className='flex flex-col md:overflow-auto'>
-                <header>
-                    <NavBar> </NavBar>
-                </header>
-                <main>
-                    <Outlet></Outlet>
-                </main>
-                <footer>
-                    <Footer></Footer>
-                </footer>
-            </div>
+            <header>
+                <NavBar> </NavBar>
+            </header>
+            <main>
+                <Outlet></Outlet>
+            </main>
+            <footer>
+                <Footer></Footer>
+            </footer>
+
         </>
     );
 }
