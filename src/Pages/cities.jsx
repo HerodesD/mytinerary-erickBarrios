@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import CitiesCard from '../Components/CitiesCard';
-import Footer from '../Components/footer';
+
 
 
 
@@ -19,7 +19,6 @@ export default function Cities() {
                 </button>
                 <CitiesCard></CitiesCard>
 
-                <Footer></Footer>
 
             </div>
 

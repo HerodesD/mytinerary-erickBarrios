@@ -15,7 +15,7 @@ export default function Footer() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <footer className="bg-black text-orange-300  text-center   relative">
+        <footer className="bg-black text-orange-300  text-center border border-yellow-900 relative">
             <div className="mx-auto flex justify-center flex-row gap-56 p-3 items-center">
 
                 <button

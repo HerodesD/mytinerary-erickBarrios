@@ -25,7 +25,7 @@ export default function NavBarDetails() {
                         <div key={index}>
 
                             <NavLink to={route.to} className="text-orange-400">
-                                <img src={route.img} alt={`Icon for ${route.to}`} className="inline-block w-11 h-11" />
+                                <img src={route.img} alt={`Icon for ${route.to}`} className="inline-block w-11 h-11" /> Back
                             </NavLink>
                         </div>
                     ))}
