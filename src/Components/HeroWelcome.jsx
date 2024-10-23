@@ -21,6 +21,7 @@ export default function HeroWelcome() {
                     <p className="text-white shadow-orange-400 absolute font-mono italic text-md font-bold md:text-xl lg:text-3xl text-center w-11/12">{item.slogan}</p>
 
                 </div>
+
             ))}
         </>
     );

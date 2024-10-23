@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 
 
@@ -51,7 +50,7 @@ export default function CarouselP() {
 
     return (
         <>
-            <div className='overflow-hidden'>
+            <div className='overflow-hidden w-auto'>
                 <h1 className="text-center text-3xl rounded-none font-mono">Popular Mytineraries</h1>
                 {slides.map((city, i) => (
                     <div className="items-center justify-center w-full h-full" key={i}>

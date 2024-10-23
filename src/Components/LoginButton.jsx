@@ -7,15 +7,19 @@ export default function LoginButton() {
     };
 
     return (
-        <button onClick={handleLogin} className="flex items-center p-2 md:text-lg text-sm  bg-blue-500 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300">
+        <button
+            onClick={handleLogin}
+            className="items-center text-sm md:text-base p-1 md:p-2 h-12 md:h-14 flex bg-blue-600 text-white rounded-lg hover:bg-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-300"
+        >
             <img
                 src="https://png.pngtree.com/png-vector/20191003/ourmid/pngtree-user-login-or-authenticate-icon-on-gray-background-flat-icon-ve-png-image_1786166.jpg"
                 alt="generic user"
-
-                className="w-10 h-10 rounded-full mr-0" />
-            <h1 className='text-orange-300'>Login</h1>
+                className="w-8 md:w-10 h-8 md:h-10 rounded-full mr-1"
+            />
+            <span className='text-orange-400'>Login</span>
         </button>
     );
 }
+
 
 
