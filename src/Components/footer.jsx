@@ -16,7 +16,7 @@ export default function Footer() {
 
     return (
         <footer className="bg-black text-orange-300  text-center   relative">
-            <div className="container mx-auto flex justify-center flex-row gap-56 p-3 items-center">
+            <div className="mx-auto flex justify-center flex-row gap-56 p-3 items-center">
 
                 <button
                     onClick={() => setIsOpen(!isOpen)}

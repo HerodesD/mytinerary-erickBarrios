@@ -1,30 +1,32 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import LoginButton from "./LoginButton";
+
 import { useState } from "react";
 
 
 const routes = [
-    { to: "/", text: "Home" },
-    { to: "/Cities", text: "Cities" }];
 
-export default function NavBar() {
+    {
+        to: "/Cities",
+        img: "https://cdn.icon-icons.com/icons2/116/PNG/96/back_previous_arrow_left_19318.png"
+    }];
+
+export default function NavBarDetails() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
         <nav className=" flex bg-black w-full  h-20  justify-center items-center ">
 
 
-            <ul className="container mx-auto flex justify-around items-center flex-row-reverse">
-                <li>
-                    <LoginButton></LoginButton>
-                </li>
+            <ul className="container mx-auto flex justify-around items-center ">
+
                 <li className="flex gap-5 md:gap-40 text-sm md:text-base">
                     {routes.map((route, index) => (
                         <div key={index}>
 
-                            <NavLink to={route.to} className="text-orange-400">{route.text}</NavLink>
-
+                            <NavLink to={route.to} className="text-orange-400">
+                                <img src={route.img} alt={`Icon for ${route.to}`} className="inline-block w-11 h-11" />
+                            </NavLink>
                         </div>
                     ))}
                 </li>
@@ -50,4 +52,3 @@ export default function NavBar() {
         </nav>
     );
 }
-

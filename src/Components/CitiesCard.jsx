@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const fetchCitiesData = async (filter = "") => {
     const apiUrl = `http://localhost:8080/api/cities/all?name=${filter}`;
@@ -39,10 +40,10 @@ export default function CitiesCard() {
 
     return (
         <div className="container mx-auto px-4 py-8 bg-black text-white">
-            <h1 className="text-2xl font-bold mb-6">City Gallery</h1>
+            <h1 className="text-2xl font-bold mb-6">Cities Gallery</h1>
             <input
                 type="text"
-                placeholder="Filter cities"
+                placeholder="Cities"
                 value={filter}
                 onChange={handleFilterChange}
                 className="w-full p-2 mb-6 text-yellow-900 rounded border text-center "
@@ -51,7 +52,9 @@ export default function CitiesCard() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {cities.map((city, index) => (
                     <div key={index} className="border rounded-lg p-4 shadow-md bg-gray-800">
-                        <img src={city.photo} alt={city.name} className="w-full h-40 object-cover mb-4 rounded" />
+                        <NavLink to={`/details/${city.name}`}>
+                            <img src={city.photo} alt={city.name} className="w-full h-40 object-cover mb-4 rounded" />
+                        </NavLink>
                         <h2 className="text-xl font-semibold">{city.name}</h2>
                     </div>
                 ))}

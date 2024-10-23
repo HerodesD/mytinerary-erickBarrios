@@ -2,16 +2,25 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { useState } from 'react';
 import Home from "./Pages/Home";
 import Cities from "./Pages/Cities";
+import Details from './Pages/details';
 import NotFound from "./Pages/NotFound";
 import StandardLayaout from './Layouts/StandardLayaout';
+import DetailsLayout from './Layouts/DetailsLayaout';
 
 
 
-const router = createBrowserRouter([ //Es el array de rutas
+const router = createBrowserRouter([
   {
     element: <StandardLayaout></StandardLayaout>,
     children: [{ path: "/", element: <Home></Home> },
     { path: "/home", element: <Home></Home> },]
+  },
+  {
+    element: <DetailsLayout></DetailsLayout>,
+    children: [
+      { path: "/details/:id", element: <Details></Details> },
+
+    ]
   },
 
   { path: "/cities", element: <Cities></Cities> },
@@ -36,8 +45,7 @@ function App() {
 
 
 
-//Rutas
-// comunicacion entre componentes: 1:11 Video 
+
 
 
 
