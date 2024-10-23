@@ -11,7 +11,7 @@ const fetchCityDetails = async (name) => {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
-        console.log('API Response:', data); // Añadir este log para ver la respuesta de la API
+        console.log('API Response:', data);
         return data.response.length > 0 ? data.response[0] : null;
     } catch (error) {
         console.error('Error fetching the data:', error);
@@ -25,11 +25,11 @@ export default function Details() {
 
     useEffect(() => {
         fetchCityDetails(name).then(cityData => {
-            console.log('City Data:', cityData); // Añadir este log para ver los datos de la ciudad
+            console.log('City Data:', cityData);
             if (cityData) {
                 setCity(cityData);
             } else {
-                console.log('No city found with the given name'); // Añadir este log si no se encuentra la ciudad
+                console.log('No city found with the given name');
             }
         });
     }, [name]);
