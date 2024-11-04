@@ -6,7 +6,7 @@ import CarouselP from "../Components/Train";
 export default function Home() {
     return (
         <>
-            <div className="bg-white">
+            <div className="bg-white container mx-auto">
                 <HeroWelcome></HeroWelcome>
                 <CallToAction></CallToAction>
 

@@ -12,7 +12,7 @@ export default function NavBar() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className=" flex bg-black w-full  h-20  justify-center items-center ">
+        <nav className=" flex items-center bg-gray-950  w-full  h-20  justify-between mx-auto ">
 
 
             <ul className="container mx-auto flex justify-around items-center flex-row-reverse">

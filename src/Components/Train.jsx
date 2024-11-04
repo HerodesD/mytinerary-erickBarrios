@@ -17,7 +17,7 @@ export default function CarouselP() {
         { id: 7, title: 'Paris', city: 'https://images.pexels.com/photos/161853/eiffel-tower-paris-france-tower-161853.jpeg?auto=compress&cs=tinysrgb&w=600' },
         { id: 8, title: 'Hanoi', city: 'https://images.pexels.com/photos/1004122/pexels-photo-1004122.jpeg?auto=compress&cs=tinysrgb&w=600' },
         { id: 9, title: 'Cusco', city: 'https://media.istockphoto.com/id/479900992/es/foto/lama-y-machu-picchu.jpg?b=1&s=612x612&w=0&k=20&c=5NKnUl7P2e0ZMN60zXGIMAj8Q-VAV3wLKT8rhdUGMTE=' },
-        { id: 10, title: 'Rio de Janeiro', city: 'https://images.pexels.com/photos/6580703/pexels-photo-6580703.jpeg?auto=compress&cs=tinysrgb&w=600' },
+        { id: 10, title: 'Rio', city: 'https://images.pexels.com/photos/6580703/pexels-photo-6580703.jpeg?auto=compress&cs=tinysrgb&w=600' },
         { id: 11, title: 'Tokyo', city: 'https://images.pexels.com/photos/315191/pexels-photo-315191.jpeg?auto=compress&cs=tinysrgb&w=600' },
         { id: 12, title: 'Cartagena', city: 'https://images.pexels.com/photos/15847154/pexels-photo-15847154/free-photo-of-panorama-urbano-skyline-verano-rascacielos.jpeg?auto=compress&cs=tinysrgb&w=600' },
 
@@ -50,22 +50,21 @@ export default function CarouselP() {
 
     return (
         <>
-            <div className='overflow-hidden w-auto'>
+            <div className='w-full mx-auto container'>
                 <h1 className="text-center text-3xl rounded-none font-mono">Popular Mytineraries</h1>
                 {slides.map((city, i) => (
                     <div className="items-center justify-center w-full h-full" key={i}>
                         <div
-                            className={`flex flex-row items-center justify-center transition-transform transform ${i === currentIndex ? 'visible' : 'hidden'}`}
-                        >
+                            className={`flex flex-row mx-auto items-center justify-center transition-transform transform ${i === currentIndex ? 'visible' : 'hidden'}`}>
                             {city.map((image) => (
-                                <div key={image.id} className="flex flex-col items-center justify-center w-full">
+                                <div key={image.id} className="flex flex-col items-center justify-center   w-full">
                                     <img
-                                        className="w-24 md:w-48 lg:w-72 xl:w-96 md:p-1    h-32 md:h-40 lg:h-48 xl:h-64 object-cover rounded-xl"
+                                        className=" md:p-1  w-72 h-40 items-center object-cover mb-4   rounded-xl"
                                         src={image.city}
                                         alt={image.title}
                                     />
 
-                                    <h3 className="text-center text-sm md:text-base font-bold lg:text-lg xl:text-xl  rounded-lg shadow-lg">
+                                    <h3 className="text-center text-xs p-0  font-bold  rounded-lg shadow-lg">
                                         {image.title}
                                     </h3>
 
