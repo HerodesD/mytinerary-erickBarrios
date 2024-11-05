@@ -39,8 +39,8 @@ export default function DetailsCard() {
     return (
         <div className="mx-auto flex flex-col  px-4 py-8 bg-black items-center text-center text-white ">
             <h1 className="text-4xl mb-6 text-center text-amber-600 shadow font-extrabold">{city.name}</h1>
-            <img src={city.photo} alt={city.name} className="w-1/2 aspect-video h-1/2 items-center mx-auto object-cover mb-4 rounded bg-blue-700 dark:bg-transparent border-3 shadow-md dark:shadow-pink-400  border-emerald-200 text-neutral-100 " />
-            <div className="leading-6 rounded-full w-1/2 flex flex-col items-center text-center text-sm bg-teal-200 dark:bg-transparent border-3 shadow-md dark:shadow-yellow-100 border-blue-700 text-neutral-100 px-3 p-4">
+            <img src={city.photo} alt={city.name} className="md:w-1/2 w-full aspect-video h-1/2 items-center mx-auto object-cover mb-4 rounded bg-blue-700 dark:bg-transparent border-3 shadow-md dark:shadow-pink-400  border-emerald-200 text-neutral-100 " />
+            <div className="leading-6 rounded-full md:w-1/2 w-full flex flex-col items-center text-center text-sm bg-teal-200 dark:bg-transparent border-3 shadow-md dark:shadow-yellow-100 border-blue-700 text-neutral-100 px-3 p-4">
 
                 <p>Country: {city.country}</p>
                 <p>Population: {city.population}</p>
@@ -82,8 +82,8 @@ export default function DetailsCard() {
                                                 {itinerary.duration}</p>
 
                                         </div>
-                                        <div className="flex flex-wrap items-center text-center gap-2 mt-4">
-                                            <p className="rounded-full text-center text-sm bg-blue-700 dark:bg-transparent border-1 shadow-md dark:shadow-blue-500 border-blue-700 text-neutral-100 px-3 leading-6">{itinerary.hashtags}</p>
+                                        <div className="flex flex-col md:flex-wrap object-cover justify-center items-center text-center gap-1 mx-auto mt-4">
+                                            <p className="rounded-full text-xs md:text-sm items-center text-center  bg-blue-700 dark:bg-transparent border-1 shadow-md dark:shadow-blue-500 border-blue-700 text-neutral-100  leading-6">{itinerary.hashtags}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -110,7 +110,7 @@ export default function DetailsCard() {
 
                     ))
                 ) : (
-                    <p className="text-6xl font-thin">No itineraries yet for this city </p>
+                    <p className="text-2xl text-pink-500 md:text-6xl font-thin">No itineraries yet for this city </p>
                 )}
             </div>
         </div>
