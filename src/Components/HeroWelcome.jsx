@@ -17,7 +17,7 @@ export default function HeroWelcome() {
                 <div key={item.id} className='relative mx-auto overflow-hidden container  w-full h-full flex flex-col items-center justify-center  p-4'>
                     <img src={item.image} alt="traveling the world" className="	object-cover  hover:animate-none  w-full h-full   shadow-lg" />
                     <div className='absolute flex flex-col items-center shadow-zinc-500'>
-                        <h1 className=" animate-pulse shadow-black text-white  border-spacing-x-4  font-mono text-2xl font-bold mb-2 md:text-4xl lg:text-6xl text-center">{item.titleApp}</h1>
+                        <h1 className=" animate-pulse  text-white  font-mono text-2xl shadow-md dark:shadow-pink-400 bg-transparent font-bold mb-2 md:text-4xl lg:text-6xl text-center">{item.titleApp}</h1>
                         <p className="text-white shadow-orange-400 sm:p-8 p-0 md:p-32  font-mono italic font-bold text-sm sm:text-xl md:text-4xl text-center w-11/12">{item.slogan}</p>
 
                     </div>
